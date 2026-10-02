@@ -17,3 +17,5 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install --yes libudev-dev pkg-config
       - run: cargo clippy --workspace --all-targets --all-features -- -D warnings
       - run: cargo test --workspace --all-features
+      - name: CLI help without hardware
+        run: cargo run --locked --bin dynamixel -- --help
